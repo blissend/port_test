@@ -4,7 +4,7 @@ port_test is a python script to quickly test the availability of the destination
 IP:Port. This is designed to work when you are without telnet or other tools and
 to aid scripting test against multiple addresses.
 
-@auther: Adam Carlin <blissend@gmail.com>
+@author: Adam Carlin <blissend@gmail.com>
 
 ## License
 
