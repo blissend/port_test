@@ -19,7 +19,7 @@ USAGE: python port_test.py 27017 mngcl15l-prf-08 8.8.8.8
 """
 
 __author__ = ('Adam Carlin')
-__version__ = '2015.04.27'
+__version__ = '2015.05.06'
 __usage__ = 'python port_test.py <port> <address1> <address2> ...'
 
 import sys
@@ -56,10 +56,10 @@ if __name__ == '__main__':
                 conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 conn.settimeout(1)
                 conn.connect((host,int(port)))
-        except socket.timeout:
+        except:
+            message = sys.exc_info()[0]
             print("EXCEPTION: Trouble connecting to " + str(host))
-        except socket.gaierror:
-            print("EXCEPTION: Trouble connecting to " + str(host))
+            print("MESSAGE: " + str(message))
         else:
             if verbose == True:
                 print("SUCCESS for " + str(host))
